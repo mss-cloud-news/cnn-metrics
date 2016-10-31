@@ -3,7 +3,8 @@
 const Metrics = require('../lib/metrics');
 
 Metrics.init({
-    app: 'example',
+    app: 'api',
+    //product: 'exampleproduct',
     flushEvery: 1000 * 2,
     plugins: [
         'customCounters'
@@ -15,4 +16,4 @@ console.log('Start');
 setInterval(() => {
     console.log('count');
     Metrics.count('hit.counter');
-}, 1000 * 1);
+}, 1000 * 3);
